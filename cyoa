@@ -1,0 +1,240 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+
+{
+  const string magenta("\033[0;35m");
+  string name;
+  int choice;
+  int select;
+  const int Left = 1, Right = 2;
+  
+  cout << magenta << endl;
+  cout << "Welcome to your own adventure!\n" << endl;
+  cout << "Before entering the Dark forest, please enter your name: ";
+  getline (cin, name);
+  cout << "\nHello, " << name << "! Let's begin!\n";
+  cout << "You have gotten lost in the Dark forest, a place with dangerous creatures and monsters. ";
+  cout << "All you have is a flashlight and sword. You have to find your way out of the forest. ";
+  cout << "You continue walking and you see a fork in the road. ";
+  cout << "Which way do you want to go?" << endl;
+  cout << " 1. Left    ";
+  cout << " 2. Right" << endl;
+  cout << "\n Enter your choice: ";
+  cin >> select;
+
+  switch (select)
+    {
+      case Left:
+        {cout << "You have chosen to go left, but you encounter a vicious wolf! " << endl;
+        cout << "What do you want to do?" << endl;
+         cout << "1. Fight the wolf    ";
+         cout << "2. Run away" << endl;
+         cout << "\n Enter your choice: ";
+         cin >> choice;
+         if (choice == 1)
+          { cout << " \n You engage the wolf in battle, and manage to defeat it! ";
+            cout << " You continue on your journey, and eventually find a hidden cave. " << endl;
+            cout << " What do you want to do? " << endl;
+            cout << "1. Enter the cave    ";  
+            cout << "2. Keep walking" << endl;
+            cout << "\n Enter your choice: " << endl;
+            cin >> choice;
+            if (choice == 1)
+            { cout << "\n You enter the cave but find a sleeping dragon! " << endl;
+              cout << " What do you want to do next? " << endl;
+              cout << "1. Try to sneak past the dragon    ";
+              cout << "2. Fight the dragon" << endl;
+              cout << " \n Enter your choice: ";
+              cin >> choice;
+              if (choice == 1)
+              { cout << "\n You try to sneak past the dragon, but it wakes up and attacks you! ";
+                cout << " You grab your sword and fight back. You manage to defeat the dragon and find a treasure chest! " << endl;}
+              else 
+              { cout << " \n You grab your sword and fight back. You manage to defeat the dragon and find a treasure chest! " << endl;}
+              
+              cout << " What do you want to do next? " << endl;
+              cout << " 1. Open the treasure chest    ";
+              cout << " 2. Leave the treasure chest and continue on your journey. " << endl;
+              cout << "\n Enter your choice: ";
+              cin >> choice;
+              if (choice == 1) 
+              { cout << "\n You open the treasure chest and find a magical sword!";
+                cout << " You continue on your journey with the magical sword.";
+                cout << " You eventually find a village and are greeted by friendly villagers.";
+                cout << " You ask to follow them out of the forest and they agree.";
+                cout << " You follow the villagers out of the forest and eventually reach your destination." << endl;
+                cout << "\n Congratulations! You have completed your adventure!" << endl;}
+              else
+              { cout << " \nYou leave the treasure chest and continue on your journey." ;
+                cout << " You eventually come across a young couple." << endl;
+                cout << " What do you want to do next? " << endl;
+                cout << " 1. Approach the couple    ";
+                cout << " 2. Ignore the couple and continue your journey." << endl;
+                cout << " \nEnter your choice: ";
+                cin >> choice;
+                if (choice == 1)
+                { cout << " \nYou approach the couple and asked for directions." ;
+                  cout << " They tell you that once you cross this bridge, you will be out of the forest." ;
+                  cout << " You cross the bridge and eventually reach your destination." ;
+                  cout << " \n Congratulations! You have completed your adventure!" << endl;}
+                else
+                { cout << " \nYou ignore the couple and continue your journey.";
+                  cout << " You eventually come across a river and see clear view out of the forest.";
+                  cout << " You cross the river and eventually reach your destination." << endl;
+                  cout << " \n Congratulations! You have completed your adventure!" << endl;}}
+            }
+              
+            else 
+            { cout << " \nYou continue to pass the cave and come across a lake. You see sunlight on the other side of the lake" ;
+              cout << " You are almost out of the forest!" << endl;
+              cout << " What do you want to do next? " << endl;
+              cout << " 1. Swim across the lake    ";
+              cout << " 2. Look fora boat" << endl;
+              cout << " \nEnter your choice: ";
+              cin >> choice;
+              if (choice == 1)
+              { cout << "\n You swim across the lake and finally see sunlight." ;
+                cout << " You are out of the forest!" << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}
+              else 
+              { cout << " \nYou look for a boat and eventually find one." ;
+                cout << " You sail across the lake and eventually exit the dark forest." << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}}           
+          }
+           
+         else
+           cout << " \nYou run away from the wolf, and keep running until you encounter a cabin." << endl;
+           cout << " What do you want to do?" << endl;
+           cout << " 1. Enter the cabin    ";
+           cout << " 2. Keep walking" << endl;
+           cout << " \nEnter your choice: ";
+           cin >> choice;
+           if (choice == 1)
+           { cout << "\n You enter the cabin and find a friendly old man.";
+             cout << " He offers you a map and a compass." ;
+             cout << " He explains that you continue down this same road, and you will find a river. Follow the river downstream, and it will lead you out.";
+             cout << " You thank the old man and continue on your journey." ;
+             cout << " You eventually come across the river and follow it downstream as the old man said." ;
+             cout << " You finally see a clear view out of the forest. You made it." << endl;
+             cout << "\n  Congratulations! You have completed your adventure!" << endl;}            
+           else
+           { cout << " \nYou decide to keep walking and encounter a bridge. You are able to see a clear view a few meters away on the other side." ;
+             cout << " You cross the bridge and eventually make it out of the forest." << endl;
+             cout << "\n  Congratulations! You have completed your adventure!" << endl;} 
+            
+         break;}
+      
+      case Right:
+        { cout << " \nYou have chosen to go right, and you encounter a group of bandits!" << endl;
+          cout << " What do you want to do?" << endl;
+          cout << " 1. Fight the bandits    ";
+          cout << " 2. Run away" << endl;
+          cout << " \n Enter your choice: ";
+          cin >> choice;
+          if (choice == 1)
+          { cout << " \n You engage the bandits in battle, and manage to defeat them!";
+            cout << " You continue down the path and eventually come across a river." << endl;
+            cout << " What do you want to do?" << endl;
+            cout << " 1. Follow the river downstream   ";
+            cout << " 2. Cross the river and continue forward" << endl;
+            cout << " \n Enter your choice: ";
+            cin >> choice;
+            if (choice == 1)
+            { cout << " \n You follow the river downstream and eventually come across a village in the dark forest." ;
+              cout << " You are greeted by friendly villagers and they offer to help you out of the forest" << endl;
+              cout << " What do you want to do? " << endl;
+              cout << " 1. Follow the villagers    ";
+              cout << " 2. Decline their offer and continue on your journey" << endl;
+              cout << " \nEnter your choice: ";
+              cin >> choice;
+              if (choice == 1)
+              { cout << " \n You follow the villagers, and they lead you out of the forest." << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}
+              else
+              { cout << " \nYou decline the villagers' offer and continue on your journey.";
+                cout << " You eventually come across a river and see clear view out of the forest.";
+                cout << " You cross the river and continue towards the clear view." ;
+                cout << " You finally make it out of the forest." << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}               
+            }
+            else
+            { cout << " \nYou cross the river and continue forward. However, you hear a voice in the distance." << endl;
+              cout << " What do you want to do?" << endl;
+              cout << " 1. Investigate the voice    ";
+              cout << " 2. Ignore the voice and continue forward" << endl;
+              cout << " \nEnter your choice: ";
+              cin >> choice;
+              if (choice == 1)
+              { cout << " \nYou investigate the voice and find a small and kind pixie." ;
+                cout << " The little pixie offers you a magical potion that will transport you out of the forest." ;
+                cout << " You take the pixie up on the offer, and the pixie transports you out." ;
+                cout << " You made it out of the forest." << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}
+              else
+              { cout << " \n You ignore the voice and continue forward. You encounter a friendly wizard who offers to transport you out of the forest." ;
+                cout << " You accept the wizard's offer, and he transports you out of the forest.";
+                cout << " You made it out of the forest." << endl;
+                cout << " \n Congratulations! You have completed your adventure!" << endl;}
+            }
+          }
+
+          else
+          { cout << "\n  You run away from the bandits, and continue on your journey." ;
+            cout << " You keep walking and find a lake. You are greeted a mermaid, and she offers you assistance." << endl;
+            cout << " What do you want to do?" << endl;
+            cout << " 1. Accept the mermaid's help    ";
+            cout << " 2. Decline the mermaid's help " << endl;
+            cout << " \nEnter your choice: ";
+            cin >> choice;
+            if (choice == 1)
+            { cout << " \nYou accept the mermaid's help, and she leads you to a boat." ;
+              cout << " You get into the boat, and she tells you which way to sail to get out of the forest." ;
+              cout << " You sail the boat and eventually make it out of the forest." << endl;
+              cout << " \n Congratulations! You have completed your adventure!" << endl;}
+            else
+            { cout << " \nYou decline the mermaid's help and thank her." ;
+              cout << " You continue down the path and encounter a group of goblins." << endl;
+              cout << " What do you want to do?" << endl;
+              cout << " 1. Fight the goblins    ";
+              cout << " 2. Run away" << endl;
+              cout << " \nEnter your choice: ";
+              cin >> choice;
+              if (choice == 1)
+              { cout << " \n You fight the goblins and manage to defeat them!" ;
+                cout << " You continue down the path and encounter another group of vicious wolves." << endl;
+                cout << " What do you want to do?" << endl;
+                cout << " 1. Fight the wolves    ";
+                cout << " 2. Run away" << endl;
+                cout << " \nEnter your choice: ";
+                cin >> choice;
+                if (choice == 1)
+                { cout << " \n You fight the wolves and manage to defeat them!" ;
+                  cout << " You keep walking and finally reach a clear view out of the forest." ;
+                  cout << " You walk towards the clear view and eventually make it out of the forest." << endl;
+                  cout << "\n Congratulations! You have completed your adventure!" << endl;}
+               else
+                { cout << " \n You run away from the wolves and continue on your journey." ;
+                  cout << " You continued down the path and are greeted by a friendly nypmh." ;
+                  cout << " You ask for directions out of the forest, and the nymph guides you out." ;
+                  cout << " You make it out of the forest." << endl;
+                  cout << "\n Congratulations! You have completed your adventure!" << endl;}
+              }
+              else
+              { cout << "\n You run away from the goblins. You keep running until you finally lose them." ;
+                cout << " You continue down your path and meet a little fairy" ;
+                cout << " You ask for directions out of the forest, and the fairy guides you out." ;
+                cout << " The fairy takes you out, and you make it out of the forest." << endl;
+               cout << "\n Congratulations! You have completed your adventure!" << endl;}           
+            }
+          }          
+        break;}
+
+      default:
+        { cout << "\n INVALID INPUT." << endl;
+          cout << "\n Please rerun to program and try again. " << endl;} 
+    }
+  return 0;
+}
